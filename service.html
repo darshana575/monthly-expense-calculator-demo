@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:#E6E6FA;
+            }
+            h1{
+                font-family:cursive;
+                color: #800080;
+                text-align:center;
+            }
+            #result{
+                color:#0000FF;
+                font-weight:bold;
+                text-align:center;
+            }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+}
+
+#feetable {
+   border: 1px solid;
+border-collapse: separate;
+}
+
+
+        </style>
+
+    </head>
+    <body>
+<script>
+function refForm(x)
+{
+var schoolName=document.getElementById("schoolName").value;
+var childrenCount=document.getElementById("childrenCount").value;
+
+document.getElementById("result").innerHTML="Welcome "+schoolName+". You have registered for "+childrenCount+" students";
+
+return false;
+}
+</script>
+        <form onsubmit="return refForm(this);">
+            <h1>MONTHLY EXPENSES CALCULATOR</h1>
+            <table align="center">
+                <tr>
+                    <td>Group Head Name</td>
+                    <td><input type="text" name="groupHeadName"
+                    id="groupHeadName" pattern="[a-zA-Z\s]+" placeholder="Enter the Group Head Name" required></td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td>
+                        <input type="email" id="groupHeadEmail" name="groupHeadEmail" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td>
+                        <input type="text" id="groupHeadMobileNumber"
+                        name="groupHeadMobileNumber" pattern="[789][0-9]{9}" placeholder="Enter the Mobile Number" required>
+                    </td>
+                </tr>
+		<tr>
+		<td>Extra-Curricular Activity</td>
+		<td><input type="radio" name="curricularActivity" id="ka" value="Karate" required="required">Karate
+		<input type="radio" name="curricularActivity" id="mu" value="Music" required="required">Music</td>
+		</tr>
+                 <tr>
+                    <td>No of Girls</td>
+                    <td>
+                        <input type="range" id="girlseval" name="noOfGirls" min="0" max="500" data-show-value="true" required>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td>No of Boys</td>
+                    <td>
+                        <input type="range" id="boyseval" name="noOfBoys" min="0" max="500" data-show-value="true" required>
+                    </td>
+                </tr>
+
+
+		<tr>
+		<td>How did you come to know about as?</td>
+		<td><input name="survey" id="survey" list="surveys">
+				<datalist id="surveys">
+		  		<option value="Friends">
+				<option value="Social Media">
+				<option value="Newspaper">
+				<option value="Others">
+				</datalist></td>
+		</tr>
+               <tr>
+			<td><input type="submit" value="Calculate Monthly Fees"  name="submit"> </td>
+			<td><input type="reset" name="reset" value="Reset"> </td>
+			</tr>
+
+<tr>
+<td colspan="2">
+<div  id="result"></div>
+</td>
+</tr>
+            </table>
+<table float="bottom" align="right" border="2" width="300"  height="2">
+<center>Per Student Fee Chart</center>
+<tr>
+<td>Extra-Curricular Activity Amount</td>
+</tr>
+<tr>
+<td>karata</td>
+<td>600</td>
+</tr>
+<tr>
+<td>Music</td>
+<td>500</td>
+</tr>
+</table>
+</div>
+
+
+        </form>
+    </body>
+</html>
